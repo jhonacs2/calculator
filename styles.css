@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    font-family: 'Happy Monkey', cursive;
+    
+}
+
+header h1 {
+    text-align: center;
+}
+
+.calculator{
+    background: #A1FFCE;  
+    background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);  
+    background: linear-gradient(to right, #FAFFD1, #A1FFCE); 
+    border-radius: 10%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.calculator #show-numbers {
+    width: 80%;
+    height: 3rem;
+    border: none;
+    margin: 1rem;
+    text-align: end;
+    padding-right: 1rem;
+}
+
+.all-numbers {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: black;
+}
+
+.all-numbers button {
+    background-color: greenyellow;
+    border-radius: 10%;
+    width: 4rem;
+    padding: 1rem;
+    margin: 1rem;
+    border: none;
+    text-decoration: none;
+}

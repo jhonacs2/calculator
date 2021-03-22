@@ -28,7 +28,7 @@ operators.forEach(element => {
                
         countOperators = countOperators + 1;
         if(countOperators >= 2){
-            total();
+            total(); 
         }
         oldValor = currentValor;
         currentValor = '';
@@ -56,6 +56,14 @@ function subtractNumbers(a,b){
     return a-b;
 }
 
+function multiply(a,b){
+    return a*b;
+}
+
+function split(a,b){
+    return a/b;
+}
+
 function reset(){
     return  (currentValor ='',
      oldValor = '',
@@ -64,9 +72,9 @@ function reset(){
 }
 
 function total(){
+    countOperators = countOperators - 1;
     switch(selectOperator){
         case '+':
-            
             result = addNumbers(Number(oldValor),Number(currentValor));
             showNumbers.placeholder = '';
             screenNumbers(result)
@@ -84,5 +92,30 @@ function total(){
             console.log(oldValor,currentValor)
             
         break;
+        case '*':
+            result = multiply(Number(oldValor),Number(currentValor));
+            showNumbers.placeholder = '';
+            screenNumbers(result)
+            currentValor = result.toString();
+            oldValor = '';
+            result= '';
+            console.log(oldValor,currentValor)
+            
+        break;
+
+        case '/':
+            result = split(Number(oldValor),Number(currentValor));
+            showNumbers.placeholder = '';
+            screenNumbers(result)
+            currentValor = result.toString();
+            oldValor = '';
+            result= '';
+            console.log(oldValor,currentValor)
+            
+        break;
+
+        default:
+            return;
+            
     }
 }
